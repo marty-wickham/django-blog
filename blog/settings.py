@@ -139,7 +139,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+# This is a list of directories where static files can potentially live.
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+# This gives a collection point for our static files. When we deploy to Heroku, it's going to collect those into that location and deploy them, then, to our project. 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # This is how Django refers to the URL.
